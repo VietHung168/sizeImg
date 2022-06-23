@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@{
+    foreach(var s in @ViewBag.str)
+            {
+        <img src="@s.link"/>
+        <p>@s.link</p>
+                <br />
+                <p>SIZE: @s.size kB</p>
+            }
+
+}
