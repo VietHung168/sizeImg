@@ -11,6 +11,9 @@ namespace CanHinhAnh.Controllers
     public class cao
     {
         public List<img> list = new List<img>();
+        mahoa mh = new mahoa();
+
+      
 
         string tach(string s)
         {
@@ -24,8 +27,8 @@ namespace CanHinhAnh.Controllers
             {
                 s1 = "https:" + s1;
             }
-           
 
+            s1 = mh.giaima(s1);
             return s1;
         }
         public List<img> Crawl(string html)

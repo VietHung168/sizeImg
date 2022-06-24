@@ -2,13 +2,26 @@
     ViewData["Title"] = "Home Page";
 }
 
+
 @{
-    foreach(var s in @ViewBag.str)
-            {
-        <img src="@s.link"/>
-        <p>@s.link</p>
-                <br />
-                <p>SIZE: @s.size kB</p>
-            }
+    foreach (var s in @ViewBag.str)
+    {
+
+        if (@s.size >= 300)
+        {
+            <img src="@s.link" />
+            <p style="color: red">@s.link</p>
+            <p style="color: red">SIZE: @s.size kB</p>
+            <br />
+        }
+        else
+        {
+            <img src="@s.link" />
+            <p>@s.link</p>
+            <br />
+            <p>SIZE: @s.size kB</p>
+        }
+
+    }
 
 }
